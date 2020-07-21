@@ -24,20 +24,20 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = [ name for name in humans if name.name.startswith("D")]
+a = [ human.name for human in humans if human.name.startswith("D")]
 print(a)
 
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [name for name in humans if name.name.endswith("e")]
+b = [name.name for name in humans if name.name.endswith("e")]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = [name for name in humans if name.name[0].lower() in ("c", "d", "e", "f", "g")]
+c = [name.name for name in humans if name.name[0].lower() in ["c", "d", "e", "f", "g"]]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
@@ -48,7 +48,8 @@ print(d)
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
-e = [f"{human.name} - {human.age}" for human in humans]
+#Alice - 29
+e = [f"{human.name}-{human.age}" for human in humans]
 print(e)
 
 # Write a list comprehension that creates a list of tuples containing name and
